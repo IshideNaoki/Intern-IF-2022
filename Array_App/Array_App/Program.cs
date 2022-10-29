@@ -115,10 +115,7 @@ namespace Array_App
                     Console.WriteLine("入力内容が当てはまりません、入力し直してください");
                     continue;
                 }
-            }
-
-            //ファイル処理を行います
-            
+            }            
         }
     }
 }
