@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SpreadsheetLight;//プロジェクトのNuGetパッケージの管理からダウンロードが必要
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Spreadsheet;
+
 
 namespace Array_App
 {
@@ -15,15 +13,15 @@ namespace Array_App
             //教科数を5教科に指定する
             string[][] student_score =
             {
-                new string[]{"教科名", "点数", "ボーダーライン", "合否"},
-                new string[]{"教科名", "点数", "ボーダーライン", "合否"},
-                new string[]{"教科名", "点数", "ボーダーライン", "合否"},
-                new string[]{"教科名", "点数", "ボーダーライン", "合否"},
-                new string[]{"教科名", "点数", "ボーダーライン", "合否"},
+                new string[]{"教科名", "点数", "合格点", "合否"},
+                new string[]{"教科名", "点数", "合格点", "合否"},
+                new string[]{"教科名", "点数", "合格点", "合否"},
+                new string[]{"教科名", "点数", "合格点", "合否"},
+                new string[]{"教科名", "点数", "合格点", "合否"},
             };
 
             //配列の中の中身を入力する
-            Console.WriteLine("成績を入力してください");
+            Console.WriteLine("成績の処理を行います。");
             int student_count = 0;
             int student_count_inner;
 
@@ -81,7 +79,7 @@ namespace Array_App
             //合否の判断
             for (int i = 0; i < student_score.Length; i++)
             {
-                if (int.Parse(student_score[i][1]) > int.Parse(student_score[i][2]))//点数がボーダーラインより大きければ合格とする
+                if (int.Parse(student_score[i][1]) > int.Parse(student_score[i][2]))//点数が合格点より大きければ合格とする
                 {
                     student_score[i][3] = "合";
                 }
@@ -94,7 +92,7 @@ namespace Array_App
             //ソート処理
             while (true)
             {
-                Console.WriteLine("点数を基準にデータを並べ替えます");
+                Console.WriteLine("点数で並べ替えます");
                 Console.WriteLine("昇順なら->a, 降順なら->d,変えないなら->nを入力してください");
                 string text = Console.ReadLine();
 
@@ -120,30 +118,7 @@ namespace Array_App
             }
 
             //ファイル処理を行います
-            Console.WriteLine("ファイル名を入力してください");
-            string Excel_file_name = Console.ReadLine();
-
-            SLDocument new_sheet1 = new SLDocument();
-            new_sheet1.SetCellValue(1, 1, "教科名");
-            new_sheet1.SetCellValue(1, 2, "点数");
-            new_sheet1.SetCellValue(1, 3, "ボーダーライン");
-            new_sheet1.SetCellValue(1, 4, "合否");
-
-            for (int i = 0; i < student_score.Length; i++)
-            {
-                int check_num;
-
-                for (int j = 0; j < student_score[i].Length; j++)
-                    if (!int.TryParse(student_score[i][j], out check_num))
-                    {
-                        new_sheet1.SetCellValue(i + 2, j + 1, student_score[i][j]);
-                    }
-                    else
-                    {
-                        new_sheet1.SetCellValue(i + 2, j + 1, int.Parse(student_score[i][j]));//点数とボーダーラインはint型に直す
-                    }
-            }
-            new_sheet1.SaveAs(Excel_file_name + ".xlsx");
+            
         }
     }
 }
