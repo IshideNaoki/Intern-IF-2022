@@ -36,7 +36,7 @@ namespace Array_App
                     int number_true;//入力した値が数字であるか判断する際に使う
 
                     //数字を入力したいところの処理
-                    if (student_score[student_count][student_count_inner] == "点数" || student_score[student_count][student_count_inner] == "ボーダーライン")
+                    if (student_score[student_count][student_count_inner] == "点数" || student_score[student_count][student_count_inner] == "合格点")
                     {
                         if (string.IsNullOrEmpty(input_text))//空入力をしたとき
                         {
