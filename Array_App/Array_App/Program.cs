@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SpreadsheetLight;//プロジェクトからNuGetパッケージの管理からダウンロードが必要
+using SpreadsheetLight;//プロジェクトのNuGetパッケージの管理からダウンロードが必要
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Spreadsheet;
 
