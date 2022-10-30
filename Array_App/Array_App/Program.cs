@@ -116,6 +116,7 @@ namespace Array_App
                     continue;
                 }
             }
+            //結果を出力します
             for (int i = 0; i < student_score.Length; i++)
             {
                 for(int j = 0; j < student_score[i].Length; j++)
