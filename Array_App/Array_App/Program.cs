@@ -28,7 +28,7 @@ namespace Array_App
             while (student_count < student_score.Length)
             {
                 student_count_inner = 0;
-                while (student_count_inner < student_score[student_count].Length - 1)//合否は点数とボーダーラインから求めるのでループは教科名からボーダーラインまで
+                while (student_count_inner < student_score[student_count].Length - 1)//合否は点数と合格点から求めるのでループは教科名から点数まで
                 {
                     Console.Write(student_score[student_count][student_count_inner] + "を入力してください->");
                     string input_text = Console.ReadLine();
@@ -79,7 +79,7 @@ namespace Array_App
             //合否の判断
             for (int i = 0; i < student_score.Length; i++)
             {
-                if (int.Parse(student_score[i][1]) > int.Parse(student_score[i][2]))//点数が合格点より大きければ合格とする
+                if (int.Parse(student_score[i][1]) >= int.Parse(student_score[i][2]))//点数が合格点より大きければ合格とする
                 {
                     student_score[i][3] = "合";
                 }
@@ -115,7 +115,15 @@ namespace Array_App
                     Console.WriteLine("入力内容が当てはまりません、入力し直してください");
                     continue;
                 }
-            }            
+            }
+            for (int i = 0; i < student_score.Length; i++)
+            {
+                for(int j = 0; j < student_score[i].Length; j++)
+                {
+                    Console.Write(student_score[i][j]+"\t");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
