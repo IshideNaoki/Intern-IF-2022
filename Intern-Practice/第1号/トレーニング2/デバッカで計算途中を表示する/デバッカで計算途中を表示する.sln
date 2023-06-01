@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "デバッカで計算途中を表示する", "デバッカで計算途中を表示する\デバッカで計算途中を表示する.csproj", "{B13FAF59-289C-44CD-8422-EA11981B5EE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B13FAF59-289C-44CD-8422-EA11981B5EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13FAF59-289C-44CD-8422-EA11981B5EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13FAF59-289C-44CD-8422-EA11981B5EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13FAF59-289C-44CD-8422-EA11981B5EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF6DC8F0-9680-4DD6-8F79-36A28A89168D}
+	EndGlobalSection
+EndGlobal

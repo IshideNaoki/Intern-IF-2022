@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "データ追加・削除_ArrayList", "データ追加・削除_ArrayList\データ追加・削除_ArrayList.csproj", "{069A7FFF-8F09-4CB3-885A-0FB778A73175}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{069A7FFF-8F09-4CB3-885A-0FB778A73175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{069A7FFF-8F09-4CB3-885A-0FB778A73175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{069A7FFF-8F09-4CB3-885A-0FB778A73175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{069A7FFF-8F09-4CB3-885A-0FB778A73175}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48BD15A6-1AB5-4A97-89ED-661F413899F4}
+	EndGlobalSection
+EndGlobal
