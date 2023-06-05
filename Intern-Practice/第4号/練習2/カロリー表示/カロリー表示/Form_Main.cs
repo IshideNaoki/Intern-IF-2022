@@ -17,7 +17,7 @@ namespace カロリー表示
             array[3] = (int.Parse(array[1]) * int.Parse(array[2])).ToString();
 
             ListViewItem item = new ListViewItem(array);
-            this.listView1.Items.Add(item);
+            listView1.Items.Add(item);
         }
     }
 }
