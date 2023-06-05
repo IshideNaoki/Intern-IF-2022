@@ -15,7 +15,7 @@ namespace 起床_就寝時間チェック
             s[1] = textBox_wakeup.Text;
             s[2] =textBox_sleep.Text;
 
-            this.members.Add(s);
+            members.Add(s);
 
             displayData();
 
@@ -24,14 +24,14 @@ namespace 起床_就寝時間チェック
 
         private void displayData() 
         { 
-            this.listView_Display.Items.Clear();
+            listView_Display.Items.Clear();
             for(int i = 0; i < members.Count; i++) 
             {
                 string[] s = members[i];
 
                 ListViewItem item = new ListViewItem(s);
 
-                this.listView_Display.Items.Add(item);
+                listView_Display.Items.Add(item);
             }
         
         }
