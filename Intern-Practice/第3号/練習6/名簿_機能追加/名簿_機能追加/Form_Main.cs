@@ -11,7 +11,7 @@ namespace 名簿_機能追加
         private List<string[]> members = new List<string[]>();
         private void button_Set_Click(object sender, EventArgs e)
         {
-            setData(this.textBox_FamilyName.Text, this.textBox_Name.Text);
+            setData(textBox_FamilyName.Text, textBox_Name.Text);
 
             showData();
         }
@@ -19,7 +19,7 @@ namespace 名簿_機能追加
         private void setData(string familyName, string name)
         {
             string[] personalData = new string[2];
-            if(this.radioButton_Man.Checked)
+            if(radioButton_Man.Checked)
             {
                 personalData[0] = "男性";
             }
@@ -29,29 +29,29 @@ namespace 名簿_機能追加
             }
 
             personalData[1] = familyName + " "+name;
-            this.members.Add(personalData);
+            members.Add(personalData);
         }
         private void showData()
         {
-            this.listBox_Display.Items.Clear();
-            for(int i = 0; i < this.members.Count; i++)
+            listBox_Display.Items.Clear();
+            for(int i = 0; i < members.Count; i++)
             {
-                string[] data = this.members[i];
+                string[] data = members[i];
 
                 string displayString = data[0] + "\t" + data[1];
-                this.listBox_Display.Items.Add(displayString);
+                listBox_Display.Items.Add(displayString);
             }
         }
 
         private void button_delete_Click(object sender, EventArgs e)
         {
-            if(this.listBox_Display.SelectedIndices.Count == 0) 
+            if(listBox_Display.SelectedIndices.Count == 0) 
             {
                 MessageBox.Show("削除する項目を選択してください。");
             }
 
-            int index = this.listBox_Display.SelectedIndices[0];
-            this.members.RemoveAt(index);
+            int index = listBox_Display.SelectedIndices[0];
+            members.RemoveAt(index);
             showData();
         }
     }
