@@ -14,14 +14,14 @@ namespace カロリー表示
 
         private void button_display_Click(object sender, EventArgs e)
         {
-            if(this.openFileDialog.ShowDialog() != DialogResult.OK) 
+            if(openFileDialog.ShowDialog() != DialogResult.OK) 
             {
                 return;
             }
 
 
-            List<string[]> list = readData(this.openFileDialog.FileName);
-            List<int> menu_kcal = countData(list);//方法はこれしかない int[]はダメ
+            List<string[]> list = readData(openFileDialog.FileName);
+            List<int> menu_kcal = countData(list);
 
 
             setData(list, menu_kcal); //データをセット
@@ -129,19 +129,19 @@ namespace カロリー表示
                 s[1] = list[i][1];
                 s[2] = countArray[i].ToString();
 
-                this.menus.Add(s);
+                menus.Add(s);
             }
         }
         
         private void displayData(int kcal)
         {
-            this.listView1.Items.Clear();
-            foreach (string[] data in this.menus) 
+            listView1.Items.Clear();
+            foreach (string[] data in menus) 
             {
                 if (int.Parse(data[2]) > kcal)
                 {
                     ListViewItem item = new ListViewItem(data);
-                    this.listView1.Items.Add(item);
+                    listView1.Items.Add(item);
                 }
                 
             }

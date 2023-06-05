@@ -16,7 +16,7 @@ namespace 問題作成ツール
                 s[0] = textBox_question.Text;
                 s[1] = textBox_answer.Text;
 
-                this.questions.Add(s);
+                questions.Add(s);
             }
             else
             {
@@ -77,7 +77,7 @@ namespace 問題作成ツール
         private void button_clearAll_Click(object sender, EventArgs e)
         {
             int count_num = questions.Count;
-            this.questions.Clear();
+            questions.Clear();
 
             Label[] questionArray = { label_q1, label_q2, label_q3, label_q4, label_q5, label_q6 };
             TextBox[] boxansArray = { textBox_ans1, textBox_ans2, textBox_ans3, textBox_ans4, textBox_ans5, textBox_ans6 };
