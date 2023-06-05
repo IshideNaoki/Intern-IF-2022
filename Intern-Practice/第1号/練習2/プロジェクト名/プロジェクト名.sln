@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "プロジェクト名の更新", "プロジェクト名\プロジェクト名の更新.csproj", "{D788A1D5-4E3B-4ACF-B31D-A25F31088E44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "プロジェクト名", "プロジェクト名\プロジェクト名.csproj", "{1C276239-9CA8-49DB-A93F-807DD69874EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D788A1D5-4E3B-4ACF-B31D-A25F31088E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D788A1D5-4E3B-4ACF-B31D-A25F31088E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D788A1D5-4E3B-4ACF-B31D-A25F31088E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D788A1D5-4E3B-4ACF-B31D-A25F31088E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C276239-9CA8-49DB-A93F-807DD69874EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C276239-9CA8-49DB-A93F-807DD69874EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C276239-9CA8-49DB-A93F-807DD69874EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C276239-9CA8-49DB-A93F-807DD69874EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D788D0C2-CBFC-448E-80D6-C06433D9EB29}
+		SolutionGuid = {C7C120B0-B66D-4823-A7C3-8985C00E1216}
 	EndGlobalSection
 EndGlobal
