@@ -10,26 +10,26 @@ namespace ルーレット
         private void button_start_Click(object sender, EventArgs e)
         {
 
-            this.timer.Enabled= true;
-            this.button_start.Enabled = false;
-            this.button_stop.Enabled = true;
+            timer.Enabled= true;
+            button_start.Enabled = false;
+            button_stop.Enabled = true;
 
         }
 
         private void button_stop_Click(object sender, EventArgs e)
         {
-            this.timer.Enabled= false;
-            this.button_start.Enabled = true;
-            this.button_stop.Enabled = false;
+            timer.Enabled= false;
+            button_start.Enabled = true;
+            button_stop.Enabled = false;
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
 
-            this.countTimer = this.countTimer.AddSeconds(1.0);
+            countTimer = countTimer.AddSeconds(1.0);
 
 
-            int count_num = int.Parse(this.countTimer.ToString("ss")) % 12;
+            int count_num = int.Parse(countTimer.ToString("ss")) % 12;
             switch(count_num) 
             {
                 case 0:
