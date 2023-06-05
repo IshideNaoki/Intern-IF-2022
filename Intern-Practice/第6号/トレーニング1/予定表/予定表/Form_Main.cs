@@ -12,10 +12,10 @@ namespace 予定表
         {
             string[] s = new string[3];
 
-            string date = this.dateTimePicker1.Value.ToShortDateString();
+            string date = dateTimePicker1.Value.ToShortDateString();
             s[0] = date;
             s[1] = textBox_reserve.Text;
-            this.members.Add(s);
+            members.Add(s);
             displayData();
         }
         private void displayData()
