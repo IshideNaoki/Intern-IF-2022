@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "検索機能付きメモ帳": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\admin\\source\\repos\\Intern-IF-2022\\Intern-Practice\\第2号\\練習5\\検索機能付きメモ帳\\検索機能付きメモ帳\\search.txt\r\n"
+    }
+  }
+}
