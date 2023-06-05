@@ -18,7 +18,7 @@ namespace リストビュー表示
 
             ListViewItem item = new ListViewItem(array);
 
-            this.listView1.Items.Add(item);
+            listView1.Items.Add(item);
         }
     }
 }
