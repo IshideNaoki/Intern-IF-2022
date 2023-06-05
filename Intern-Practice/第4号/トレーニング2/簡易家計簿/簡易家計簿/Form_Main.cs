@@ -12,22 +12,22 @@ namespace 簡易家計簿
         {
             string[] s = new string[5];
 
-            s[0] = this.textBox_date.Text;
-            s[1] = this.textBox_income.Text;
-            s[2] = this.textBox_submission.Text;
-            s[3] =  this.textBox_money.Text;
+            s[0] = textBox_date.Text;
+            s[1] = textBox_income.Text;
+            s[2] = textBox_submission.Text;
+            s[3] =  textBox_money.Text;
             int total = int.Parse(textBox_income.Text) - int.Parse(textBox_money.Text);
             s[4] = total.ToString();
 
 
-            this.members.Add(s);
+            members.Add(s);
             displayData();
 
             
         }
         private void displayData() 
         { 
-            this.listView_display.Items.Clear();
+            listView_display.Items.Clear();
             for(int i = 0; i<members.Count; i++) 
             {
                 
@@ -38,7 +38,7 @@ namespace 簡易家計簿
 
                     ListViewItem item = new ListViewItem(s);
 
-                    this.listView_display.Items.Add(item);
+                    listView_display.Items.Add(item);
                 }
                 else
                 {
@@ -51,7 +51,7 @@ namespace 簡易家計簿
                     string[] s = { product[0], product[1]+"円", product[2], product[3]+"円",  total.ToString()+"円"};
                     ListViewItem item = new ListViewItem(s);
 
-                    this.listView_display.Items.Add(item);
+                    listView_display.Items.Add(item);
                 }
                     
                 
@@ -60,20 +60,20 @@ namespace 簡易家計簿
 
         private void button_del_Individual_Click(object sender, EventArgs e)
         {
-            if(this.listView_display.SelectedIndices.Count == 0) 
+            if(listView_display.SelectedIndices.Count == 0) 
             {
                 MessageBox.Show("削除する項目を選択してください。");
                 return;
             }
 
-            int index = this.listView_display.SelectedIndices[0];
-            this.members.RemoveAt(index);
+            int index = listView_display.SelectedIndices[0];
+            members.RemoveAt(index);
             displayData();
         }
 
         private void button_allclear_Click(object sender, EventArgs e)
         {
-            this.members.Clear();
+            members.Clear();
             displayData();
         }
     }
