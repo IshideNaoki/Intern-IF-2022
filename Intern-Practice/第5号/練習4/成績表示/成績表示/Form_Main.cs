@@ -14,11 +14,11 @@ namespace 成績表示
         }
         private void readData() 
         { 
-            this.students.Clear();
+            students.Clear();
             
             
-            StreamReader sr1 = new StreamReader("C:\\Users\\admin\\Documents\\インフィニットフィールド　インターンシップ\\生徒名.txt");
-            StreamReader sr2 = new StreamReader("C:\\Users\\admin\\Documents\\インフィニットフィールド　インターンシップ\\成績.txt");
+            StreamReader sr1 = new StreamReader("C:\\Users\\admin\\source\\repos\\Intern-IF-2022\\Intern-Practice\\第5号\\練習4\\成績表示\\成績表示\\生徒名.txt");
+            StreamReader sr2 = new StreamReader("C:\\Users\\admin\\source\\repos\\Intern-IF-2022\\Intern-Practice\\第5号\\練習4\\成績表示\\成績表示\\成績.txt");
 
 
 
@@ -29,7 +29,7 @@ namespace 成績表示
                 string[] s2 = sr2.ReadLine().Split(' ');
 
                 string[] product = { s1[0], s1[1], s2[1], s2[2], s2[3] };
-                this.students.Add(product);
+                students.Add(product);
             }
             sr1.Close();
             
@@ -37,15 +37,15 @@ namespace 成績表示
         }
         private void displayData() 
         { 
-            this.listView1.Items.Clear();
-            for(int i = 0; i < this.students.Count; i++) 
+            listView1.Items.Clear();
+            for(int i = 0; i < students.Count; i++) 
             {
-                string[] product = this.students[i];
+                string[] product = students[i];
                 int total = int.Parse(product[2]) + int.Parse(product[3]) + int.Parse(product[4]);
                 string[] displayProduct = { product[0], product[1], product[2], product[3], product[4], total.ToString()};
 
                 ListViewItem item = new ListViewItem(displayProduct);
-                this.listView1.Items.Add(item);
+                listView1.Items.Add(item);
             
             }
         }
