@@ -16,7 +16,7 @@ namespace 名簿_列追加
             string[] s = new string[6];
             s[0]  = nextNumber;
 
-            if(this.radioButton_Male.Checked )
+            if(radioButton_Male.Checked )
             {
                 s[1] = "男性";
             }
@@ -25,13 +25,13 @@ namespace 名簿_列追加
                 s[1] = "女性";
             }
 
-            s[2] = this.textBox_simei.Text + this.textBox_mei.Text;
-            s[3] = this.textBox_simei_huri.Text + this.textBox_mei_huri.Text;
+            s[2] = textBox_simei.Text + textBox_mei.Text;
+            s[3] = textBox_simei_huri.Text + textBox_mei_huri.Text;
 
-            s[4] = this.textBox_age.Text;
-            s[5] = this.textBox_phone.Text;
+            s[4] = textBox_age.Text;
+            s[5] = textBox_phone.Text;
 
-            this.members.Add(s);
+            members.Add(s);
 
             displayData();
         }
@@ -39,13 +39,13 @@ namespace 名簿_列追加
         private string getNextNumber() 
         {
             int nextNo = 1;
-            if(this.members.Count == 0)
+            if(members.Count == 0)
             {
                 return nextNo.ToString();
 
             }
 
-            string[] s = this.members[this.members.Count - 1];
+            string[] s = members[members.Count - 1];
             nextNo = int.Parse(s[0]) + 1;
 
             return nextNo.ToString();
@@ -53,27 +53,27 @@ namespace 名簿_列追加
 
         private void displayData()
         {
-            this.listView_Display.Items.Clear();
-            for(int i = 0;i<this.members.Count;i++) 
+            listView_Display.Items.Clear();
+            for(int i = 0;i<members.Count;i++) 
             {
                 string[] s = members[i];
 
                 ListViewItem item = new ListViewItem(s);
 
-                this.listView_Display.Items.Add(item);
+                listView_Display.Items.Add(item);
             }
         }
 
         private void button_Delete_Click(object sender, EventArgs e)
         {
-            if(this.listView_Display.SelectedIndices.Count == 0)
+            if(listView_Display.SelectedIndices.Count == 0)
             {
                 MessageBox.Show("削除する項目を選択してください");
                 return;
             }
 
-            int index = this.listView_Display.SelectedIndices[0];
-            this.members.RemoveAt(index);
+            int index = listView_Display.SelectedIndices[0];
+            members.RemoveAt(index);
 
             displayData();
         }
