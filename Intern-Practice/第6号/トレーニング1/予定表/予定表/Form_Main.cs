@@ -20,14 +20,14 @@ namespace 予定表
         }
         private void displayData()
         {
-            this.listView_Display.Items.Clear();
-            for(int i = 0; i < this.members.Count; i++)
+            listView_Display.Items.Clear();
+            for(int i = 0; i < members.Count; i++)
             {
                 string[] s = members[i];
 
                 ListViewItem item = new ListViewItem(s);
 
-                this.listView_Display.Items.Add(item);
+                listView_Display.Items.Add(item);
             }
         }
     }
