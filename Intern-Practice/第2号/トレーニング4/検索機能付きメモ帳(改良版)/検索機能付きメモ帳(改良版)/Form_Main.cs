@@ -9,15 +9,15 @@ namespace 検索機能付きメモ帳_改良版_
 
         private void button_display_Click(object sender, EventArgs e)
         {
-            this.openFileDialog.ShowDialog();
+            openFileDialog.ShowDialog();
         }
         private void openFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            string text = readData(this.openFileDialog.FileName);
+            string text = readData(openFileDialog.FileName);
             displayData(text);
 
         }
-        private static string readData(string filePath)
+        private  string readData(string filePath)
         {
             StreamReader sr = new StreamReader(filePath);
 
@@ -34,7 +34,7 @@ namespace 検索機能付きメモ帳_改良版_
 
         private void button_search_Click(object sender, EventArgs e)
         {
-            string text = readData(this.openFileDialog.FileName);
+            string text = readData(openFileDialog.FileName);
 
             bool result = search(text, textBox_search.Text);
 
@@ -47,7 +47,7 @@ namespace 検索機能付きメモ帳_改良版_
                 MessageBox.Show("「" + textBox_search.Text + "」は見つかりませんでした。");
             }
         }
-        private static bool search(string text, string search_word)
+        private  bool search(string text, string search_word)
         {
             int index = 0;
             index = text.IndexOf(search_word);
@@ -64,12 +64,12 @@ namespace 検索機能付きメモ帳_改良版_
 
         private void button_add_Click(object sender, EventArgs e)
         {
-            this.saveFileDialog.ShowDialog();
+            saveFileDialog.ShowDialog();
         }
 
         private void saveFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            saveData(this.saveFileDialog.FileName+".txt", textBox_display.Text);
+            saveData(saveFileDialog.FileName, textBox_display.Text);
           
         }
         private void saveData(string fileName, string save_word) 
