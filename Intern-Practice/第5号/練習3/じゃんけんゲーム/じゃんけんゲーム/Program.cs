@@ -136,6 +136,7 @@ namespace Program
             else if ((user == 2) && (cpu == 2))
             {
                 result = "あいこです";
+
             }
             else if ((user == 2) && (user == 3))
             {
