@@ -8,7 +8,7 @@ namespace sort_list
     class sort_list
     {
         //プログラムの説明
-        //1.ListのSizeを入力します(1以上の数字のみ)
+        //1.ListのSizeを入力します
         //2.Listに要素(数字)を追加します
         //3.昇順もしくは降順を選択しListを並べ替え出力します
 
@@ -19,7 +19,8 @@ namespace sort_list
 
             string count_num;//ListのSizeを入力する変数
 
-            while (true)//Sizeが数字かどうか判断する
+            //1.Sizeが数字かどうか判断する
+            while (true)
             {
                 Console.Write("ListのSize(自然数)を入力してください =>");
                 count_num = Console.ReadLine();
@@ -46,7 +47,7 @@ namespace sort_list
 
             Console.WriteLine();
 
-            //Listに要素を追加する
+            //2.Listに要素を追加する
             for (int i = 0; i < int.Parse(count_num); i++)
             {
                 Console.Write("Listに追加する数字を入力してください =>");
@@ -58,7 +59,7 @@ namespace sort_list
 
             List<int> array_sort = new List<int>();
 
-            //昇順or降順に並べ替える
+            //3.昇順or降順に並べ替える
             while (true)
             {
                 Console.WriteLine("Listを昇順 or 降順に並べ替えます");
