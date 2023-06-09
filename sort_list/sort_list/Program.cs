@@ -7,13 +7,19 @@ namespace sort_list
 {
     class sort_list
     {
+        //プログラムの説明
+        //1.ListのSizeを入力します(1以上の数字のみ)
+        //2.Listに要素(数字)を追加します
+        //3.昇順もしくは降順を選択しListを並べ替え出力します
+
+
         public static void Main(string[] args)
         {
             List<int> array = new List<int>();//Listの宣言
 
-            string count_num;//ListのSize
+            string count_num;//ListのSizeを入力する変数
 
-            while (true)//要素数が数字かどうか
+            while (true)//Sizeが数字かどうか判断する
             {
                 Console.Write("ListのSize(自然数)を入力してください =>");
                 count_num = Console.ReadLine();
@@ -24,7 +30,11 @@ namespace sort_list
                 {
                     Console.WriteLine("0を入力しないでください");
                 }
-                else if (int.TryParse(count_num, out check_num))//0以外の数を入力した場合
+                else if(count_num == "")//空白を入力した場合
+                {
+                    Console.WriteLine("数字を入力してください");
+                }
+                else if (int.TryParse(count_num, out check_num))//1以上の数を入力した場合
                 {
                     break;
                 }
@@ -68,13 +78,16 @@ namespace sort_list
                     array_sort = desc_sort(array);
                     break;
                 }
-                else
+                else//昇順 or 降順を入力した場合
                 {
                     Console.WriteLine("昇順、降順以外を入力しないでください!!");
                 }
                 Console.WriteLine();
             }
-            //Sortした配列の要素を出力
+           
+
+            //Sortした後の配列の要素を出力
+            Console.Write("Sort=>");
             for (int i = 0; i < array_sort.Count; i++)
             {
                 Console.Write(array_sort[i] + " ");
@@ -83,8 +96,8 @@ namespace sort_list
             Console.ReadLine();
 
         }
-        //昇順sortメソッド
 
+        //昇順sortメソッド
         private static List<int> asc_sort(List<int> num_array)
         {
             for (int i = 0; i < num_array.Count; i++)
