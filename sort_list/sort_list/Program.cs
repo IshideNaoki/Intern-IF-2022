@@ -49,12 +49,33 @@ namespace sort_list
 
             Console.WriteLine();
 
+
+            string input_num;
             //2.Listに要素を追加する
             for (int i = 0; i < int.Parse(count_num); i++)
             {
-                Console.Write("Listに追加する数字を入力してください =>");
-                string input_num = Console.ReadLine();
-                array.Add(int.Parse(input_num));
+
+                while (true)
+                {
+                    Console.Write("Listに追加する数字(整数)を入力してください =>");
+                    input_num = Console.ReadLine();
+
+                    int check_num;
+
+                    if (input_num == "")//空白を入力した場合
+                    {
+                        Console.WriteLine("整数を入力してください");
+                    }
+                    else if (int.TryParse(input_num, out check_num))//数を入力した場合
+                    {
+                        array.Add(int.Parse(input_num));
+                        break;
+                    }
+                    else//文字を入力した場合
+                    {
+                        Console.WriteLine("{0}は整数ではありません", input_num);
+                    }
+                }   
             }
 
             Console.WriteLine();
