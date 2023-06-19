@@ -66,7 +66,7 @@ namespace sort_list
                     {
                         Console.WriteLine("整数を入力してください");
                     }
-                    else if (int.TryParse(input_num, out check_num))//数を入力した場合
+                    else if (int.TryParse(input_num, out check_num))//整数を入力した場合
                     {
                         array.Add(int.Parse(input_num));
                         break;
