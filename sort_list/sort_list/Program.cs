@@ -19,6 +19,7 @@ namespace sort_list
             List<int> array = new List<int>();//Listの宣言
 
             string count_num;//ListのSizeを入力する変数
+            int check_numsize;
 
             //1.ListのSizeを入力
             //その際、数字かどうか判断する
@@ -27,7 +28,7 @@ namespace sort_list
                 Console.Write("ListのSize(自然数)を入力してください =>");
                 count_num = Console.ReadLine();
 
-                int check_num;
+                
 
                 if (count_num == "0")//0を入力した場合
                 {
@@ -35,15 +36,15 @@ namespace sort_list
                 }
                 else if(count_num == "")//空白を入力した場合
                 {
-                    Console.WriteLine("数字を入力してください");
+                    Console.WriteLine("自然数を入力してください");
                 }
-                else if (int.TryParse(count_num, out check_num))//1以上の数を入力した場合
+                else if (int.TryParse(count_num, out check_numsize))//1以上の数を入力した場合
                 {
                     break;
                 }
                 else//文字を入力した場合
                 {
-                    Console.WriteLine("{0}は数字ではありません", count_num);
+                    Console.WriteLine("{0}は自然数ではありません", count_num);
                 }
             }
 
@@ -52,7 +53,7 @@ namespace sort_list
 
             string input_num;
             //2.Listに要素を追加する
-            for (int i = 0; i < int.Parse(count_num); i++)
+            for (int i = 0; i < check_numsize; i++)
             {
 
                 while (true)
@@ -68,7 +69,7 @@ namespace sort_list
                     }
                     else if (int.TryParse(input_num, out check_num))//整数を入力した場合
                     {
-                        array.Add(int.Parse(input_num));
+                        array.Add(check_num);
                         break;
                     }
                     else//文字を入力した場合
