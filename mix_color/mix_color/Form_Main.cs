@@ -13,7 +13,7 @@ namespace mix_color
         //2-2 間違いなら間違いであることをMessageBoxで表示する
         //3　正解ボタンを押すと正解となる色の正方形が表示される
 
-        //スタート
+        //1.スタート
         private void button_start_Click(object sender, EventArgs e)
         {
 
@@ -59,7 +59,7 @@ namespace mix_color
             }
         }
 
-        //解答ボタン
+        //2.解答ボタン
         private void button_answer_Click(object sender, EventArgs e)
         {
             //赤+青=紫
@@ -116,7 +116,7 @@ namespace mix_color
                 this.label_tf.Text = "不正解";
             }
         }
-        //正解ボタン
+        //3.正解ボタン
         private void button_result_Click(object sender, EventArgs e)
         {
             this.label_tf.Text = "正解↓";
